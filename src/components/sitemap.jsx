@@ -1,8 +1,7 @@
 // import NavBar from "./common_component/navbar";
-
 const SiteMap = () => {
   return (
-    <div class="container">
+    <div className="custom-container">
       {/* <NavBar /> */}
       <div className="text-center">{"The path is longer than it seems"}</div>
       <div>

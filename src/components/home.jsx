@@ -1,38 +1,40 @@
 import NavBar from "./common_component/navbar";
 import { Typewriter } from "react-simple-typewriter";
 import "./styles/home.css";
+import "./styles/common.css";
 import { IconContext } from "react-icons";
 import { FaBeer } from "react-icons/fa";
+// import Footer from "./common_component/footer";
 const right_arrow_svg = (
-  <>
-    <svg
-      stroke="currentColor"
-      fill="none"
-      stroke-width="0"
-      viewBox="0 0 24 24"
-      height="1em"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
-        fill="currentColor"
-      ></path>
-    </svg>
-  </>
+  <svg
+    stroke="currentColor"
+    fill="none"
+    stroke-width="0"
+    viewBox="0 0 24 24"
+    height="1em"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+    style={{ marginRight: "10px" }}
+  >
+    <path
+      d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
+      fill="currentColor"
+    ></path>
+  </svg>
 );
 const main_section = (
-  <section class="card" style={{ border: "none" }}>
+  <div class="card" style={{border: "none" }}>
     <div class="card-body">
       <h3 class="card-title" style={{ color: "blue" }}>
         {"<"}
         <span style={{ color: "black" }}>
           <Typewriter
             words={[
-              "Backend Engineering",
-              "Web Development",
+              "Software Engineer",
+              "Backend Engineer",
               "Tech Enthusiast",
               "Photograpy",
+              "Always Curious About Unknown"
             ]}
             loop={100}
             cursor
@@ -45,7 +47,7 @@ const main_section = (
         </span>
       </h3>
       <div class="card-text">
-        <p
+        <div
           className="card"
           style={{
             // backgroundColor: "rgb(46, 180, 195)",
@@ -63,29 +65,27 @@ const main_section = (
               textAlign: "center",
               letterSpacing: ".5rem",
               fontSize: "50px",
+              paddingBottom:"5px",
+              textShadow:" 1px 1px 2px black"
             }}
           >
-            <span style={{ color: "black", margin: 0, padding: 0 }}>
+            <span style={{ color: "#00DDFF", margin: 0, padding: 0 }}>
               Welcome to
             </span>{" "}
-            <span style={{ color: "blue", margin: 0, padding: 0 }}>
+            <span style={{ color: "#f75990", margin: 0, padding: 0 }}>
               Dipayan's
             </span>{" "}
-            <span style={{ color: "red", margin: 0, padding: 0 }}>
-              Portfolio{" "}
-            </span>{" "}
-            <span style={{ color: "green", margin: 0, padding: 0 }}>
-              Website
-            </span>
-            <span style={{ color: "yellow", margin: 0, padding: 0 }}>!</span>
+            <span style={{color:" #8458B3", margin: 0, padding: 0 }}>Portfolio </span>{" "}
+            <span style={{color:"#beef00", margin: 0, padding: 0 }}>Website</span>
+            <span style={{color:"yellow", margin: 0, padding: 0 }}>!</span>
           </div>
 
-          <div style={{ textAlign: "center" }}>
+          <div style={{ textAlign: "center" ,fontStyle:"italic"}}>
             <p style={{ textAlign: "left" }}>
               <p>
-                Hey there!{" "}
+                Hey there !{" "}
                 <IconContext.Provider
-                  value={{ color: "#000", className: "global-class-name" }}
+                  value={{ color: "#e1b382", className: "global-class-name" }}
                 >
                   <span>
                     <FaBeer />
@@ -94,57 +94,50 @@ const main_section = (
               </p>
             </p>
             <p style={{ textAlign: "left" }}>
-              I'm Dipayan, a passionate <b>backend developer</b> with a penchant
-              for creating immersive online experiences.
+              Welcome to my little corner of the web.
             </p>
             <p style={{ textAlign: "left" }}>
-              Welcome to my little corner of the web.
-            </p>{" "}
+              I'm Dipayan, a <b>Backend Developer</b> passionate about crafting
+              efficient solutions to complex problems.
+            </p>
             <p style={{ textAlign: "left" }}>
-              Whether you're a potential employer, a fellow developer, or just
-              curious about my work, I'm thrilled to have you here.
+              Let's connect and explore how I can help bring your ideas to life
+              by brainstorming.
             </p>
           </div>
-          <p style={{ textAlign: "start" }}>
-            <h5 style={{ color: "blue" }}>Skills:</h5>
+          <div style={{ marginTop: "1%", textAlign: "start" }}>
             <p>
-              When it comes to tools of the trade, I've got a few tricks up my
-              sleeve:
+              <h4 style={{textShadow:" 1px 1px 2px black", color:"red",fontStyle:"italic"}}>If you are looking for </h4>
             </p>
-            <span>
-              <ul style={{ "list-style-type": "none", margin: 0, padding: 0 }}>
+            <p>
+              <ul style={{fontStyle:"italic", "list-style-type": "none", margin: 0, padding: 0 }}>
                 <li>
-                  <h6 style={{ color: "blue" }}>{right_arrow_svg}Frontend:</h6>
-                  <p>HTML, CSS, JavaScript, React, Vue.js</p>
+                  <h5>{right_arrow_svg}Complex Real World Problem Solver</h5>
                 </li>
                 <li>
-                  <h6 style={{ color: "blue" }}>{right_arrow_svg}Backend:</h6>
-                  <p>Node.js, Express.js, Django, Flask, FastAPI</p>
-                </li>
-                <li>
-                  <h6 style={{ color: "blue" }}>{right_arrow_svg}Databases:</h6>
-                  <p>MongoDB, MySQL, PostgreSQL</p>
-                </li>
-                <li>
-                  <h6 style={{ color: "blue" }}>{right_arrow_svg}Other:</h6>
-                  <p>Git, RESTful APIs, Responsive Design</p>
+                  <h5>{right_arrow_svg}Business Solutions</h5>
                 </li>
               </ul>
-            </span>
-          </p>
-        </p>
+            </p>
+            <p>
+              <h4 style={{ textShadow:" 1px 1px 2 black", color:"#feb300",fontStyle:"italic"}}>
+                So then I'm here
+              </h4>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 );
 const Home = () => {
   // const home_text = "Home Sweet Home";
   return (
-    <>
+    <div className="custom-container">
       <NavBar />
       {/* {home_text} */}
       {main_section}
-    </>
+    </div>
   );
 };
 export default Home;

@@ -2,7 +2,7 @@ import NavBar from "./common_component/navbar";
 
 const Blogs = () => {
   return (
-    <div>
+    <div className="custom-container">
       <NavBar />
       {"Something interesting is coming very soon ................"}
     </div>

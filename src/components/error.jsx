@@ -1,6 +1,6 @@
 const ErrorPage = () => {
     return (
-        <div>
+        <div className="custom-container">
             {"sneaking around wrong road : ("}
         </div>
     );

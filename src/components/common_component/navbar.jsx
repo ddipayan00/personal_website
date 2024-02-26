@@ -19,7 +19,7 @@ const NavBar = () => {
     <>
       <nav
         className="navbar navbar-expand-lg bg-body-tertiary shadow p-3 mb-5 bg-white rounded"
-        style={{zIndex:999,position:"fixed",width:"100%"}}
+        style={{zIndex:999,position:"fixed",width:"100%",backgroundColor:"#feb300"}}
       >
         <button
           className="navbar-toggler"
@@ -86,6 +86,23 @@ const NavBar = () => {
                 href="/projects"
               >
                 Projects
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className="navbar-brand active"
+                style={{
+                  "text-shadow": "1px 1px 2px pink",
+                }}
+                aria-current="page"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleClick(e);
+                  navigate("/education");
+                }}
+                href="/education"
+              >
+                Education
               </a>
             </li>
             <li className="nav-item">
